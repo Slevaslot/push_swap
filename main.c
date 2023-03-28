@@ -6,7 +6,7 @@
 /*   By: slevaslo <slevaslo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 15:26:04 by slevaslo          #+#    #+#             */
-/*   Updated: 2023/03/06 16:35:59 by slevaslo         ###   ########.fr       */
+/*   Updated: 2023/03/27 14:41:30 by slevaslo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	make_sort(t_data *data)
 {
+	if (is_sort(data) == 0)
+		return ;
 	if (data->len == 4)
 	{
 		pb(data);
@@ -43,10 +45,10 @@ int	main(int argc, char **argv)
 		data.len = argc - 1;
 		data.err = 0;
 		if (make_stack(&data, argv) > 0)
-			return (1);
+			return (ft_printf("Error\n"));
 		make_sort(&data);
 		free_stacks(&data);
 	}
 	else
-		printf("wrong parameter");
+		ft_printf("Error\n");
 }

@@ -6,7 +6,7 @@
 /*   By: slevaslo <slevaslo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 19:42:53 by slevaslo          #+#    #+#             */
-/*   Updated: 2023/03/06 16:37:07 by slevaslo         ###   ########.fr       */
+/*   Updated: 2023/03/27 14:42:28 by slevaslo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,21 +76,21 @@ int	make_stack(t_data *data, char **argv)
 
 	i = 0;
 	if (check_numbers(argv) > 0)
-		return (ft_printf("Please Enter Int Numbers"));
+		return (1);
 	data->stack_a = new_nb(ft_atoi(argv[++i]));
 	if (!data->stack_a)
-		return (ft_printf("Error of Alloc"));
+		return (1);
 	while (i < data->len)
 	{
 		nb = new_nb(ft_atoi(argv[++i]));
 		if (!data->stack_a)
-			return (ft_printf("Error of Alloc"));
+			return (1);
 		add_back_nb(data->stack_a, nb);
 	}
 	if (check_double(data) == 1)
 	{
 		free_stacks(data);
-		return (ft_printf("Duplicate Detected"));
+		return (1);
 	}
 	return (0);
 }
