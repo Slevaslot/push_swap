@@ -6,7 +6,7 @@
 /*   By: slevaslo <slevaslo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 15:26:04 by slevaslo          #+#    #+#             */
-/*   Updated: 2023/03/27 14:41:30 by slevaslo         ###   ########.fr       */
+/*   Updated: 2023/03/30 20:37:47 by slevaslo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ int	main(int argc, char **argv)
 		free_stacks(&data);
 	}
 	else
-		ft_printf("Error\n");
+		return (0);
 }

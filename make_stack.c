@@ -22,7 +22,11 @@ int	check_numbers(char **argv)
 	while (argv[++j])
 	{
 		if (argv[j][0] == '-' || argv[j][0] == '+')
+		{
 			i++;
+			if (argv[j][1] < '0' || argv[j][1] > '9')
+				return (1);
+		}
 		while (argv[j][++i])
 		{
 			if (argv[j][i] < '0' || argv[j][i] > '9')

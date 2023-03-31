@@ -6,7 +6,7 @@
 /*   By: slevaslo <slevaslo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 15:06:33 by slevaslo          #+#    #+#             */
-/*   Updated: 2023/03/27 14:41:30 by slevaslo         ###   ########.fr       */
+/*   Updated: 2023/03/30 18:03:49 by slevaslo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,11 +82,11 @@ int	median_of(t_stack *stack)
 }
 
 void	sort_median(t_data *data)
-	{
+{
 	t_stack	*nb_a;
-	int			i;
-	int			j;
-	int			l;
+	int		i;
+	int		j;
+	int		l;
 
 	nb_a = data->stack_a;
 	j = stack_size(data->stack_a);

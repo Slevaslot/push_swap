@@ -6,7 +6,7 @@
 /*   By: slevaslo <slevaslo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 18:33:29 by slevaslo          #+#    #+#             */
-/*   Updated: 2023/03/27 14:41:30 by slevaslo         ###   ########.fr       */
+/*   Updated: 2023/03/30 20:39:25 by slevaslo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,7 @@ int	main(int argc, char **argv)
 	data.err = 0;
 	data.len = argc - 1;
 	if (make_stack(&data, argv) > 0)
-		return (1);
+		return (ft_printf("Error\n"));
 	fon = read_map(0);
 	if (fon)
 		do_move(&data, fon);
